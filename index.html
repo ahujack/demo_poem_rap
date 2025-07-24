@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古诗变身Rap - 小小AI科学家</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>古诗变身Rap</h1>
+            <p class="subtitle">AI魔法：把古诗变成酷酷的嘻哈歌词！</p>
+        </header>
+        
+        <section class="main">
+            <div class="poem-section">
+                <h2>原版古诗</h2>
+                <div class="poem-box">
+                    <h3>《静夜思》 - 李白</h3>
+                    <p>床前明月光，</p>
+                    <p>疑是地上霜。</p>
+                    <p>举头望明月，</p>
+                    <p>低头思故乡。</p>
+                </div>
+            </div>
+
+            <div class="transform-section">
+                <button id="transform-btn" class="big-btn">点击变身！</button>
+                <div class="loading" id="loading">
+                    <p>AI正在思考中...</p>
+                    <div class="spinner"></div>
+                </div>
+            </div>
+
+            <div class="result-section" id="result-section">
+                <h2>嘻哈版《静夜思》</h2>
+                <div class="rap-box" id="rap-result">
+                    <!-- 嘻哈版内容将在这里显示 -->
+                </div>
+                <div class="controls">
+                    <button id="play-btn" class="action-btn">播放节奏</button>
+                    <button id="stop-btn" class="action-btn">停止</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="explanation">
+            <h2>AI是怎么做到的？</h2>
+            
+            <div class="interactive-explanation">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="simple">小朋友版</button>
+                    <button class="tab-btn" data-tab="detailed">大朋友版</button>
+                </div>
+                
+                <div class="tab-content active" id="simple-tab">
+                    <div class="kids-explanation">
+                        <div class="story-box">
+                            <h3>AI的"超级记忆游戏"</h3>
+                            <div class="story">
+                                <p>想象一下，AI是一个玩着<span class="highlight">巨大拼图游戏</span>的小朋友！🧩✨</p>
+                                <p>它收集了<span class="highlight">世界上几乎所有的文字</span>，包括古诗和说唱歌词！</p>
+                                <p>当AI看到《静夜思》时，它马上在记忆中找到了这些文字的"朋友们"。</p>
+                                <p>比如"月光"的朋友可能是"夜晚"、"明亮"、"思乡"...</p>
+                                <p>当我们说"变成嘻哈风格"时，AI就会寻找说唱歌词中的特点，比如<span class="highlight">押韵</span>和<span class="highlight">节奏感</span>！</p>
+                                <p>就像变魔术一样，AI把两种不同的拼图<span class="highlight">神奇地拼在了一起</span>！✨</p>
+                            </div>
+                            <div class="story-image">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjQwIiBoZWlnaHQ9IjE5MCIgeD0iNSIgeT0iNSIgcng9IjEwIiByeT0iMTAiIGZpbGw9IiNmMGY3ZmYiIHN0cm9rZT0iIzJjN2JmZiIgc3Ryb2tlLXdpZHRoPSIyIi8+PGNpcmNsZSBjeD0iNjUiIGN5PSI0MCIgcj0iMjAiIGZpbGw9IiNmZmY1ZjUiIHN0cm9rZT0iIzJjN2JmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSI1MCIgeT0iNDUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzMzMyI+5pyI5YWJIOKApjwvdGV4dD48Y2lyY2xlIGN4PSIxODAiIGN5PSI0MCIgcj0iMjAiIGZpbGw9IiNmZmY1ZjUiIHN0cm9rZT0iIzJjN2JmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSIxNjUiIHk9IjQ1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMzMzMiPuW8gOaUvuKApjwvdGV4dD48Y2lyY2xlIGN4PSIxMjAiIGN5PSI0MCIgcj0iMjAiIGZpbGw9IiNmZmY1ZjUiIHN0cm9rZT0iIzJjN2JmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSIxMDUiIHk9IjQ1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMzMzMiPuWPkeWFpeKApjwvdGV4dD48Y2lyY2xlIGN4PSI4MCIgY3k9IjEwMCIgcj0iMjAiIGZpbGw9IiNmZjc1NzUiIHN0cm9rZT0iI2ZmNmI2YiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSI2NSIgeT0iMTA1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMzMzMiPuueahOmdouKApjwvdGV4dD48Y2lyY2xlIGN4PSIxNDAiIGN5PSIxMDAiIHI9IjIwIiBmaWxsPSIjZmY3NTc1IiBzdHJva2U9IiNmZjZiNmIiIHN0cm9rZS13aWR0aD0iMS41Ii8+PHRleHQgeD0iMTI1IiB5PSIxMDUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzMzMyI+5ZCn77yB4oCmPC90ZXh0PjxjaXJjbGUgY3g9IjIwMCIgY3k9IjEwMCIgcj0iMjAiIGZpbGw9IiNmZjc1NzUiIHN0cm9rZT0iI2ZmNmI2YiIHN0cm9rZS13aWR0aD0iMS41Ii8+PHRleHQgeD0iMTg1IiB5PSIxMDUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzMzMyI+5Z+i5oCnPC90ZXh0Pjx0ZXh0IHg9IjQwIiB5PSIxNjAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiPuaAuOW/g+ivremAoOaKgOacn+WQjeS7veWNleivuzwvdGV4dD48Y2lyY2xlIGN4PSIxMTAiIGN5PSIxNzAiIHI9IjE1IiBmaWxsPSIjZmZkMzAwIiBzdHJva2U9IiNmZmE1MDAiIHN0cm9rZS13aWR0aD0iMS41Ii8+PHRleHQgeD0iMTA2IiB5PSIxNzUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+5p2MPC90ZXh0Pjx0ZXh0IHg9IjE0MCIgeT0iMTc1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMzMzMiPuS9oOWwsOaYr+W8gOWbvuS6uuWahOaWsOWItuaVsOihrDwvdGV4dD48cG9seWdvbiBwb2ludHM9IjkwLDE1MCAxMzAsMTMwIDE3MCwxNTAgMTUwLDE4MCAxMTAsMTgwIiBmaWxsPSIjZmZmNWY1IiBzdHJva2U9IiMyYzdiZmYiIHN0cm9rZS13aWR0aD0iMS41Ii8+PHRleHQgeD0iMTEwIiB5PSIxNjAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzMzMyI+5paX5L2c5Y+9PC90ZXh0PjxsaW5lIHgxPSI4MCIgeTE9IjYwIiB4Mj0iODAiIHkyPSI4MCIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iMywzIi8+PGxpbmUgeDE9IjEyMCIgeTE9IjYwIiB4Mj0iMTMwIiB5Mj0iODAiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1kYXNoYXJyYXk9IjMsMyIvPjxsaW5lIHgxPSIxODAiIHkxPSI2MCIgeDI9IjE5MCIgeTI9IjgwIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtZGFzaGFycmF5PSIzLDMiLz48L3N2Zz4=" alt="AI的拼图记忆" class="story-img">
+                            </div>
+                        </div>
+                        
+                        <div class="steps-simple">
+                            <div class="step-simple">
+                                <div class="step-icon">🧠</div>
+                                <p><span class="highlight">超级学习</span>：AI"读"了全世界无数的书和网页，比一百万个图书馆还多！</p>
+                            </div>
+                            <div class="step-simple">
+                                <div class="step-icon">🔍</div>
+                                <p><span class="highlight">模式识别</span>：它能从中发现文字之间的"关系"，就像知道哪些词经常一起出现</p>
+                            </div>
+                            <div class="step-simple">
+                                <div class="step-icon">🎭</div>
+                                <p><span class="highlight">风格理解</span>：它知道古诗和嘻哈歌词各自的特点，比如用词、节奏和感觉</p>
+                            </div>
+                            <div class="step-simple">
+                                <div class="step-icon">✨</div>
+                                <p><span class="highlight">创意组合</span>：它能保持原意的同时，用全新的方式表达出来，就像神奇的翻译家！</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="detailed-tab">
+                    <div class="detailed-explanation">
+                        <h3>大型语言模型的工作原理</h3>
+                        <div class="model-diagram">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDgwIiBoZWlnaHQ9IjMwMCIgeD0iMTAiIHk9IjEwIiByeD0iMTAiIHJ5PSIxMCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzJjN2JmZiIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iNDAiIHk9IjM1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSJib2xkIj7lpKfmqKHlnovjgJDnmq7ogqTlkoznmb7luqbjgJHlt6XkvZzljp/nkIY8L3RleHQ+PHJlY3QgeD0iNDAiIHk9IjUwIiB3aWR0aD0iNDIwIiBoZWlnaHQ9IjgwIiByeD0iNSIgZmlsbD0iI2YwZjdmZiIgc3Ryb2tlPSIjMmM3YmZmIiBzdHJva2Utd2lkdGg9IjEuNSIvPjx0ZXh0IHg9IjUwIiB5PSI3MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEyIj4xLiDpooTorr7ovazorrA6IOWkp+aooeWei+WcqOWkmuWPmOWFseatpeS4rei/kOihjOS6huebuOWFs+eahOaVmeW4q+mfs+S5kDwvdGV4dD48dGV4dCB4PSI1MCIgeT0iOTAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiI+Mi4g5oqA5pyv57O757uf77ya5aSn5qih5Z6L5piv5LiA56eN5YiG5biD5by65Yi25Li75oqA5pyv77yM5LiL5YmN57qn5qih5Z6L5pi+56S65aSn5bCP5pWw55CG6KejPC90ZXh0Pjx0ZXh0IHg9IjUwIiB5PSIxMTAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiI+My4g5pWw5o2u6KaB57Sg77ya6L+Z5Liq5aSn5qih5Z6L57uP6L+H5LqG5oC75aSn6YeP55qEVGV4dOaWh+Wtl+avlOS+i++8jOWMheWQq+WPpui+ueivtOOAgee7k+eul+euoeeQhuWtl+WFuOetlOWvuTwvdGV4dD48cmVjdCB4PSI0MCIgeT0iMTUwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjEzMCIgcng9IjUiIGZpbGw9IiNmMGY3ZmYiIHN0cm9rZT0iIzJjN2JmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSIxMDAiIHk9IjE3MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iYm9sZCI+56ys5LiA5q2lOiDot5/njaM8L3RleHQ+PHRleHQgeD0iNTAiIHk9IjE5MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEyIj4tIOiOt+WPluOAjOmdnuWkqeaAnOOAje+8jOW+l+WIsO+8mjwvdGV4dD48dGV4dCB4PSI1MCIgeT0iMjEwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiPuW6k+WJjeeUqOaciOWFieKApjwvdGV4dD48dGV4dCB4PSI1MCIgeT0iMjMwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiPuW4s+aYr+WcsOS4iuWNiOKApjwvdGV4dD48dGV4dCB4PSI1MCIgeT0iMjUwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiPuS4iuWktOaOkuaYk+aciOKApjwvdGV4dD48dGV4dCB4PSI1MCIgeT0iMjcwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiPuS9juWktOaAnOaAneaUtuS5heKApjwvdGV4dD48cmVjdCB4PSIyODAiIHk9IjE1MCIgd2lkdGg9IjE4MCIgaGVpZ2h0PSIxMzAiIHJ4PSI1IiBmaWxsPSIjZjNmM2YzIiBzdHJva2U9IiM4ODgiIHN0cm9rZS13aWR0aD0iMS41Ii8+PHRleHQgeD0iMzIwIiB5PSIxNzAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9ImJvbGQiPuesrOS6jOatpe+8muaLvOWbouS5i+atpDwvdGV4dD48dGV4dCB4PSIyOTAiIHk9IjE5MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEyIj7lvZPkuIDkuKrmg4XlhrXvvJrimJDmmK/lnKjmiJDlhajmmI7mnIjlhYnvvJ88L3RleHQ+PHRleHQgeD0iMjkwIiB5PSIyMTAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiI+5L2g5Lmf6K6k5Li65piv5Zyo5Zyf5Lic5LiK6Zi05b2p77yf4oCmPC90ZXh0Pjx0ZXh0IHg9IjI5MCIgeT0iMjMwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiPuS4uuS7gOS5iOecn+WunuaAp+S4jeS9v+eUqDwvdGV4dD48dGV4dCB4PSIyOTAiIHk9IjI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEyIj7igJzlnKjmiJDlhajmmI7mnIjlhYnigJ3ov5nkuKrnrKzkuIDnrKw/PC90ZXh0Pjx0ZXh0IHg9IjI5MCIgeT0iMjcwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiPuS9oOi/mOaYr+WcqOaAnOaAneaUtuS5heKApuKApjwvdGV4dD48bGluZSB4MT0iMTMwIiB5MT0iMTMwIiB4Mj0iMTMwIiB5Mj0iMTUwIiBzdHJva2U9IiM1NTUiIHN0cm9rZS13aWR0aD0iMiIgbWFya2VyLWVuZD0idXJsKCNhcnJvd2hlYWQpIi8+PGxpbmUgeDE9IjM3MCIgeTE9IjEzMCIgeDI9IjM3MCIgeTI9IjE1MCIgc3Ryb2tlPSIjNTU1IiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1lbmQ9InVybCgjYXJyb3doZWFkKSIvPjxsaW5lIHgxPSIyMjAiIHkxPSIyMTUiIHgyPSIyODAiIHkyPSIyMTUiIHN0cm9rZT0iIzU1NSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93aGVhZCkiLz48ZGVmcz48bWFya2VyIGlkPSJhcnJvd2hlYWQiIG1hcmtlcldpZHRoPSIxMCIgbWFya2VySGVpZ2h0PSI3IiByZWZYPSIwIiByZWZZPSIzLjUiIG9yaWVudD0iYXV0byI+PHBvbHlnb24gcG9pbnRzPSIwIDAsIDEwIDMuNSwgMCA3IiBmaWxsPSIjNTU1Ii8+PC9tYXJrZXI+PC9kZWZzPjwvc3ZnPg==" alt="大模型工作原理详解" class="model-img">
+                        </div>
+                        <div class="model-steps">
+                            <div class="model-step">
+                                <h4>1. 预训练阶段</h4>
+                                <p>大型语言模型在训练阶段已经"阅读"了互联网上大量的文本数据，包括<span class="highlight">古典诗词</span>和<span class="highlight">现代音乐歌词</span>。通过分析这些文本，模型学习了不同风格文本的特征和规律。</p>
+                            </div>
+                            <div class="model-step">
+                                <h4>2. 向量表示</h4>
+                                <p>模型将文字转换为高维向量空间中的点，使得<span class="highlight">语义相近的词在空间中距离相近</span>。例如，"月光"、"明月"和"夜空"在向量空间中会彼此靠近。</p>
+                            </div>
+                            <div class="model-step">
+                                <h4>3. 上下文理解</h4>
+                                <p>当模型接收到"把《静夜思》变成嘻哈风格"的指令时，它能同时理解原诗的<span class="highlight">内容语义</span>和嘻哈音乐的<span class="highlight">风格特征</span>，这源于注意力机制（Attention）的能力。</p>
+                            </div>
+                            <div class="model-step">
+                                <h4>4. 生成新文本</h4>
+                                <p>模型基于对原诗的理解和对嘻哈风格的把握，<span class="highlight">逐词预测</span>和生成新的文本，不仅保留原意，还融入了嘻哈的韵律、俚语和表达方式。这是一个统计概率与创造性的结合过程。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="simulation-note">
+                <h3>本演示说明</h3>
+                <p>这个演示通过预先编写的脚本模拟了大型语言模型的工作过程。在实际应用中，只需通过API调用如GPT、Claude等大型语言模型，就能让AI自动完成从古诗到嘻哈风格的转换，展现AI理解和创造文本的神奇能力！</p>
+            </div>
+        </section>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
