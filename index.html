@@ -14,9 +14,18 @@
         </header>
         
         <section class="main">
+            <div class="poem-selection">
+                <h2>选择一首古诗</h2>
+                <div class="poem-selector">
+                    <button class="poem-btn active" data-poem="jingye">《静夜思》 - 李白</button>
+                    <button class="poem-btn" data-poem="chun">《春晓》 - 孟浩然</button>
+                    <button class="poem-btn" data-poem="lijiang">《望庐山瀑布》 - 李白</button>
+                </div>
+            </div>
+            
             <div class="poem-section">
                 <h2>原版古诗</h2>
-                <div class="poem-box">
+                <div class="poem-box" id="poem-box">
                     <h3>《静夜思》 - 李白</h3>
                     <p>床前明月光，</p>
                     <p>疑是地上霜。</p>
@@ -34,13 +43,79 @@
             </div>
 
             <div class="result-section" id="result-section">
-                <h2>嘻哈版《静夜思》</h2>
+                <h2>嘻哈版古诗</h2>
                 <div class="rap-box" id="rap-result">
                     <!-- 嘻哈版内容将在这里显示 -->
                 </div>
                 <div class="controls">
                     <button id="play-btn" class="action-btn">播放节奏</button>
                     <button id="stop-btn" class="action-btn">停止</button>
+                </div>
+            </div>
+            
+            <div class="magic-visualization" id="magic-visualization">
+                <h2>AI魔法过程</h2>
+                <div class="magic-container">
+                    <div class="magic-step" id="magic-step-1">
+                        <div class="magic-icon">📚</div>
+                        <div class="magic-content">
+                            <h3>第一步：理解古诗</h3>
+                            <div class="magic-animation">
+                                <div class="book-animation">
+                                    <div class="book"></div>
+                                    <div class="page"></div>
+                                </div>
+                                <p>AI阅读了无数古诗...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="magic-connector"></div>
+                    <div class="magic-step" id="magic-step-2">
+                        <div class="magic-icon">🎵</div>
+                        <div class="magic-content">
+                            <h3>第二步：学习嘻哈</h3>
+                            <div class="magic-animation">
+                                <div class="music-animation">
+                                    <div class="note note-1">♪</div>
+                                    <div class="note note-2">♫</div>
+                                    <div class="note note-3">♬</div>
+                                </div>
+                                <p>AI听懂了嘻哈节奏...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="magic-connector"></div>
+                    <div class="magic-step" id="magic-step-3">
+                        <div class="magic-icon">🧩</div>
+                        <div class="magic-content">
+                            <h3>第三步：创意重组</h3>
+                            <div class="magic-animation">
+                                <div class="puzzle-animation">
+                                    <div class="puzzle-piece p1"></div>
+                                    <div class="puzzle-piece p2"></div>
+                                    <div class="puzzle-piece p3"></div>
+                                    <div class="puzzle-piece p4"></div>
+                                </div>
+                                <p>AI创造性地重新组合...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="magic-connector"></div>
+                    <div class="magic-step" id="magic-step-4">
+                        <div class="magic-icon">✨</div>
+                        <div class="magic-content">
+                            <h3>第四步：魔法呈现</h3>
+                            <div class="magic-animation">
+                                <div class="magic-wand-animation">
+                                    <div class="wand">🪄</div>
+                                    <div class="sparkle s1">✨</div>
+                                    <div class="sparkle s2">✨</div>
+                                    <div class="sparkle s3">✨</div>
+                                </div>
+                                <p>嘻哈版诗歌诞生啦！</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -87,6 +162,25 @@
                             <div class="step-simple">
                                 <div class="step-icon">✨</div>
                                 <p><span class="highlight">创意组合</span>：它能保持原意的同时，用全新的方式表达出来，就像神奇的翻译家！</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 新增：互动小游戏 -->
+                        <div class="interactive-game">
+                            <h3>来做个小实验！</h3>
+                            <div class="game-container">
+                                <div class="game-instruction">
+                                    <p>试试看！把下面的古诗词语连接到对应的嘻哈表达方式</p>
+                                </div>
+                                <div class="matching-game">
+                                    <div class="match-item source" data-match="a">床前明月光</div>
+                                    <div class="match-item target" data-match="a">月光照在我窗前</div>
+                                    <div class="match-item source" data-match="b">举头望明月</div>
+                                    <div class="match-item target" data-match="b">抬头看那夜空中的月亮</div>
+                                    <div class="match-item source" data-match="c">低头思故乡</div>
+                                    <div class="match-item target" data-match="c">低头时想起家乡的样子</div>
+                                </div>
+                                <button id="check-matches" class="action-btn">检查答案</button>
                             </div>
                         </div>
                     </div>
